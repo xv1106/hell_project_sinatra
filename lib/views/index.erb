@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Liste des Potins</title>
+</head>
+<body>
+  <h1>Liste des Potins</h1>
+  <a href="/gossips/new/">Formulaire</a>
+  <ul>
+    <% gossips.each_with_index do |gossip, index| %>
+      <li>
+        Auteur : <%= gossip.author %><br>
+        Contenu : <%= gossip.content %><br>
+        <a href="/gossips/<%= index + 1 %>">Voir ce potin</a>
+      </li>
+    <% end %>
+  </ul>
+</body>
+</html>
